@@ -71,7 +71,7 @@ const ShopperPage = () => {
               Price: <span className="font-bold">${typeof product.price === 'number' ? product.price.toFixed(2) : 'N/A'}</span>
             </p>
             <p className="text-gray-600">Shop: {product.sellerName}</p>
-            <p className="text-gray-600">Contact Info: {product.sellerContact}</p>
+            <p className="text-gray-600">Shop Location: {product.sellerContact}</p>
             <p className="text-gray-600">In Stock: {product.quantity}</p>
             <button 
               onClick={() => handleAddToCart(product)} 
