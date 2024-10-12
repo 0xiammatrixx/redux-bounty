@@ -72,6 +72,7 @@ const ShopperPage = () => {
             </p>
             <p className="text-gray-600">Seller: {product.sellerName}</p>
             <p className="text-gray-600">Contact: {product.sellerContact}</p>
+            <p className="text-gray-600">Qty: {product.quantity}</p>
             <button 
               onClick={() => handleAddToCart(product)} 
               className={`mt-4 text-white py-2 px-4 rounded-lg transition duration-300 ${
