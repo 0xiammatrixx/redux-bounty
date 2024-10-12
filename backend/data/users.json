@@ -1,0 +1,18 @@
+[
+  {
+    "username": "adminUser",
+    "password": "$2a$10$TmjRvXriG1Hj.A62J.LdC.k4pYv5eTfHbLkIG70PULUhBo.vcmlzK", 
+    "role": "admin"
+  },
+  {
+    "username": "shopperUser",
+    "password": "$2a$10$zryLgznF8C9g4DfmxOosgu5jF.LbffXJvFb5YXSjb.OuBn0nceGgK",
+    "role": "shopper"
+  },
+  {
+    "username": "sellerUser",
+    "password": "$2a$10$XJgJClFbI2qWx5LciZzV9OjAsb6DhG9L/djiXOaiZ5Fp2Ch9fFMLG", 
+    "role": "seller"
+  }
+]
+

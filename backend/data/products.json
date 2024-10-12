@@ -1,0 +1,24 @@
+[
+    {
+      "name": "Laptop",
+      "price": 1200,
+      "sellerName": "John Doe",
+      "sellerContact": "john@example.com",
+      "quantity": "20"
+    },
+    {
+      "name": "Smartphone",
+      "price": 800,
+      "sellerName": "Jane Smith",
+      "sellerContact": "jane@example.com",
+      "quantity": "20"
+    },
+    {
+      "name": "Gaming Console",
+      "price": 400,
+      "sellerName": "Tom Johnson",
+      "sellerContact": "tom@example.com",
+      "quantity": "20"
+    }
+  ]
+  

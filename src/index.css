@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Avoid applying global styles that could conflict with App.css */
+:root {
+  color-scheme: light dark; /* Retain this for color scheme */
+}
+
+/* Remove styles from index.css that overlap with App.css */
+body {
+  margin: 0; /* Keep it clean */
+}
+
+/* Keep the import for tailwind classes */
