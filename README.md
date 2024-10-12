@@ -12,6 +12,8 @@ This website is a fully functional e-commerce platform that supports multiple ro
 - **Shopping Cart**: Shoppers can add products to their shopping cart, review their cart, and proceed to checkout.
 - **Responsive Design**: The website is fully responsive, providing an optimal user experience on both desktop and mobile devices.
 
+## **TAKE NOTE: THE NAVIGATION BAR IS COLLAPSED BY DEFAULT, YOU CAN OPEN IT FROM THE BOTTOM RIGHT MENU BUTTON**
+
 ## Prerequisites
 
 To run this project locally or in a cloud-based development environment like Gitpod, you will need the following:
