@@ -3,6 +3,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { checkoutCart, removeFromCart } from '../features/cartSlice';
 import { purchaseProduct } from '../features/productSlice';
+import { Link } from 'react-router-dom';
 
 const CartPage = () => {
   const dispatch = useDispatch();
@@ -30,7 +31,12 @@ const CartPage = () => {
     <div className="container mx-auto p-6">
       <h2 className="text-4xl font-bold mb-6 text-center text-gray-800">Shopping Cart</h2>
       {cartItems.length === 0 ? (
-        <p className="text-center text-lg text-gray-500">Your cart is empty.</p>
+        <div className="flex flex-col items-center">
+        <p className="text-center text-lg text-gray-500  mb-6">Add Items to your cart to see them here</p>
+        <Link to="/shopper" className="bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 rounded">
+            Add Items
+          </Link>
+          </div>
       ) : (
         <>
           {/* Total Price Display */}
@@ -55,7 +61,7 @@ const CartPage = () => {
                   </span>
                   <button 
                     onClick={() => handleRemoveFromCart(product.id)} 
-                    className="text-red-500 hover:text-red-700 ml-4 transition duration-300">
+                    className="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition duration-300 ease-in-out">
                     Remove
                   </button>
                 </div>

@@ -63,7 +63,7 @@ const SellerPage = () => {
             type="text"
             value={product.sellerContact}
             onChange={(e) => handleProductUpdate(product.id, { ...product, sellerContact: e.target.value })}
-            placeholder="Contact Us"
+            placeholder="Shop Location"
             className="bg-gray-200 text-gray-800 p-2 mb-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-400" // Adjusted margin-bottom to mb-4 for last input
           />
           <button onClick={() => handleRemoveProduct(product.id)} className="bg-red-600 text-white py-1 px-3 rounded hover:bg-red-700 transition duration-200">
@@ -103,7 +103,7 @@ const SellerPage = () => {
       />
       <input
         type="text"
-        placeholder="Contact Us"
+        placeholder="Shop Location"
         value={newProduct.sellerContact}
         onChange={(e) => setNewProduct({ ...newProduct, sellerContact: e.target.value })}
         className="bg-gray-200 text-gray-800 p-2 mb-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-400" // Adjusted margin-bottom to mb-4 for last input

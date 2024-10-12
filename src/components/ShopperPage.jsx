@@ -70,9 +70,9 @@ const ShopperPage = () => {
             <p className="text-gray-600 mt-2">
               Price: <span className="font-bold">${typeof product.price === 'number' ? product.price.toFixed(2) : 'N/A'}</span>
             </p>
-            <p className="text-gray-600">Seller: {product.sellerName}</p>
-            <p className="text-gray-600">Contact: {product.sellerContact}</p>
-            <p className="text-gray-600">Qty: {product.quantity}</p>
+            <p className="text-gray-600">Shop: {product.sellerName}</p>
+            <p className="text-gray-600">Contact Info: {product.sellerContact}</p>
+            <p className="text-gray-600">In Stock: {product.quantity}</p>
             <button 
               onClick={() => handleAddToCart(product)} 
               className={`mt-4 text-white py-2 px-4 rounded-lg transition duration-300 ${
