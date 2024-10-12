@@ -39,7 +39,7 @@ const AdminPage = () => {
   return (
     <div className="admin-page p-8 bg-gray-900 min-h-screen">
       <h2 className="text-4xl font-bold mb-6 text-white">Admin Dashboard</h2>
-      <h3 className="text-2xl font-semibold mb-4 text-gray-300">Registered Users</h3>
+      <h3 className="text-2xl font-semibold mb-4 text-gray-300">Current Users</h3>
       <ul className="mb-6 space-y-4">
         {users.map((user) => (
           <li key={user.id} className="flex justify-between items-center p-4 bg-gray-800 text-white rounded-lg shadow-md">
@@ -49,7 +49,7 @@ const AdminPage = () => {
                 onClick={() => handleDeleteUser(user.id)} 
                 className="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition duration-300 ease-in-out"
               >
-                Delete
+                Delete User
               </button>
               <select
                 value={user.role}
@@ -65,7 +65,7 @@ const AdminPage = () => {
         ))}
       </ul>
 
-      <h3 className="text-2xl font-semibold mb-4 text-gray-300">Add New User</h3>
+      <h3 className="text-2xl font-semibold mb-4 text-gray-300">Create New User</h3>
       <div className="space-y-4">
         <input
           type="text"
