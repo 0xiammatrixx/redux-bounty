@@ -34,11 +34,11 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-light">
-      <form onSubmit={handleSubmit} className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
-        <h2 className="text-2xl font-bold text-center mb-6 text-primary">Login</h2>
+    <div className="min-h-screen flex items-center justify-center bg-gray-900">
+      <form onSubmit={handleSubmit} className="bg-gray-800 p-10 rounded-lg shadow-xl max-w-md w-full">
+        <h2 className="text-3xl font-bold text-center mb-6 text-white">Welcome Back, Login</h2>
         
-        {error && <p className="text-red-500 text-center">{error}</p>} {/* Display error message */}
+        {error && <p className="text-red-500 text-center mb-4">{error}</p>} {/* Display error message */}
         
         <div className="mb-4">
           <input
@@ -47,7 +47,7 @@ const Login = () => {
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             required
-            className="w-full p-3 border border-gray-300 rounded-lg bg-gray-300 focus:ring-2 focus:ring-primary focus:border-primary"
+            className="w-full p-3 border border-gray-600 rounded-lg bg-gray-700 text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
           />
         </div>
         
@@ -58,7 +58,7 @@ const Login = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
-            className="w-full p-3 border border-gray-300 rounded-lg bg-gray-300 focus:ring-2 focus:ring-primary focus:border-primary"
+            className="w-full p-3 border border-gray-600 rounded-lg bg-gray-700 text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
           />
         </div>
         
@@ -67,7 +67,7 @@ const Login = () => {
             value={role}
             onChange={(e) => setRole(e.target.value)}
             required
-            className="w-full p-3 border border-gray-300 rounded-lg bg-gray-300 text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary hover:bg-gray-400 cursor-pointer"
+            className="w-full p-3 border border-gray-600 rounded-lg bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 hover:bg-gray-600 cursor-pointer"
           >
             <option value="shopper">Shopper</option>
             <option value="seller">Seller</option>
@@ -77,7 +77,7 @@ const Login = () => {
         
         <button
           type="submit"
-          className="w-full bg-primary text-white py-3 rounded-lg font-semibold hover:bg-secondary transition duration-300 ease-in-out"
+          className="w-full bg-blue-500 text-white py-3 rounded-lg font-semibold hover:bg-blue-600 transition duration-300 ease-in-out"
         >
           Login
         </button>

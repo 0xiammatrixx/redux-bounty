@@ -37,24 +37,24 @@ const AdminPage = () => {
   };
 
   return (
-    <div className="admin-page p-6 bg-gray-light min-h-screen">
-      <h2 className="text-3xl font-bold mb-4 text-primary">Admin Dashboard</h2>
-      <h3 className="text-2xl font-semibold mb-2 text-secondary">Registered Users</h3>
-      <ul className="mb-4">
+    <div className="admin-page p-8 bg-gray-900 min-h-screen">
+      <h2 className="text-4xl font-bold mb-6 text-white">Admin Dashboard</h2>
+      <h3 className="text-2xl font-semibold mb-4 text-gray-300">Registered Users</h3>
+      <ul className="mb-6 space-y-4">
         {users.map((user) => (
-          <li key={user.id} className="flex justify-between items-center mb-2 p-2 border-b border-gray-300 bg-gray-800 text-white">
+          <li key={user.id} className="flex justify-between items-center p-4 bg-gray-800 text-white rounded-lg shadow-md">
             <span className="text-lg">{user.username} ({user.role})</span>
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-4">
               <button 
                 onClick={() => handleDeleteUser(user.id)} 
-                className="bg-red-500 text-white px-3 py-1 rounded-lg hover:bg-red-600 transition duration-300 ease-in-out"
+                className="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition duration-300 ease-in-out"
               >
                 Delete
               </button>
               <select
                 value={user.role}
                 onChange={(e) => handleRoleChange(user.id, e.target.value)}
-                className="p-2 border border-gray-300 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-primary"
+                className="p-2 border border-gray-600 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
                 <option value="shopper">Shopper</option>
                 <option value="seller">Seller</option>
@@ -65,26 +65,26 @@ const AdminPage = () => {
         ))}
       </ul>
 
-      <h3 className="text-2xl font-semibold mb-2 text-secondary">Add New User</h3>
-      <div className="flex flex-col space-y-4">
+      <h3 className="text-2xl font-semibold mb-4 text-gray-300">Add New User</h3>
+      <div className="space-y-4">
         <input
           type="text"
           placeholder="Username"
           value={newUsername}
           onChange={(e) => setNewUsername(e.target.value)}
-          className="p-3 border border-gray-300 rounded-lg bg-gray-800 text-white focus:ring-2 focus:ring-primary focus:border-primary"
+          className="p-3 border border-gray-600 rounded-lg bg-gray-700 text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
         />
         <input
           type="password"
           placeholder="Password"
           value={newPassword}
           onChange={(e) => setNewPassword(e.target.value)}
-          className="p-3 border border-gray-300 rounded-lg bg-gray-800 text-white focus:ring-2 focus:ring-primary focus:border-primary"
+          className="p-3 border border-gray-600 rounded-lg bg-gray-700 text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
         />
         <select
           value={newRole}
           onChange={(e) => setNewRole(e.target.value)}
-          className="p-3 border border-gray-300 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-primary"
+          className="p-3 border border-gray-600 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
           <option value="shopper">Shopper</option>
           <option value="seller">Seller</option>
@@ -92,7 +92,7 @@ const AdminPage = () => {
         </select>
         <button 
           onClick={handleAddUser}
-          className="bg-primary text-white py-3 rounded-lg font-semibold hover:bg-secondary transition duration-300 ease-in-out"
+          className="bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 ease-in-out w-full"
         >
           Add User
         </button>

@@ -1,8 +1,8 @@
-// src/components/CartPage.jsx (or Cart.jsx)
+// src/components/CartPage.jsx
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { checkoutCart, removeFromCart } from '../features/cartSlice'; // Import removeFromCart
-import { purchaseProduct } from '../features/productSlice'; // Import purchase action
+import { checkoutCart, removeFromCart } from '../features/cartSlice';
+import { purchaseProduct } from '../features/productSlice';
 
 const CartPage = () => {
   const dispatch = useDispatch();
@@ -10,56 +10,65 @@ const CartPage = () => {
 
   // Calculate total price
   const totalPrice = cartItems.reduce((total, product) => {
-    const productPrice = typeof product.price === 'number' ? product.price : 0; // Ensure price is a number
-    return total + productPrice * product.quantity; // Calculate total
+    const productPrice = typeof product.price === 'number' ? product.price : 0;
+    return total + productPrice * product.quantity;
   }, 0);
 
   const handleCheckout = () => {
     cartItems.forEach(product => {
-      // Dispatch action to purchase product and reduce stock
       dispatch(purchaseProduct({ id: product.id, quantity: product.quantity }));
     });
-    // Dispatch checkout action to clear the cart
     dispatch(checkoutCart());
-    alert('Checkout successful!'); // Show confirmation
+    alert('Checkout successful!');
   };
 
   const handleRemoveFromCart = (id) => {
-    dispatch(removeFromCart(id)); // Dispatch removeFromCart action
+    dispatch(removeFromCart(id));
   };
 
   return (
     <div className="container mx-auto p-6">
-      <h2 className="text-3xl font-bold mb-6 text-center">Your Cart</h2>
+      <h2 className="text-4xl font-bold mb-6 text-center text-gray-800">Shopping Cart</h2>
       {cartItems.length === 0 ? (
-        <p className="text-center text-lg">Your cart is empty.</p>
+        <p className="text-center text-lg text-gray-500">Your cart is empty.</p>
       ) : (
         <>
-          <div className="bg-white shadow-md rounded-lg p-4">
-            {cartItems.map(product => (
-              <div key={product.id} className="flex justify-between items-center border-b py-3">
-                <span className="font-semibold">{product.name}</span>
-                <span className="text-gray-700">
-                  Price: ${typeof product.price === 'number' ? product.price.toFixed(2) : 'N/A'}
-                </span>
-                <span className="text-gray-700">Qty: {product.quantity}</span>
-                <button 
-                  onClick={() => handleRemoveFromCart(product.id)} 
-                  className="text-red-500 hover:text-red-700 ml-4">
-                  Remove
-                </button>
-              </div>
-            ))}
-            <div className="flex justify-between font-bold mt-4">
+          {/* Total Price Display */}
+          <div className="bg-gray-100 shadow-lg rounded-lg p-4 mb-6">
+            <div className="flex justify-between font-bold text-xl text-gray-800">
               <span>Total:</span>
               <span>${totalPrice.toFixed(2)}</span>
             </div>
-            <button 
-              onClick={handleCheckout} 
-              className="checkout-btn bg-gradient-to-r from-green-400 to-blue-500 text-white py-2 px-4 rounded-lg mt-6 w-full hover:shadow-lg transition duration-300">
-              Finalize Checkout
-            </button>
           </div>
+
+          {/* Product Items */}
+          <div className="bg-gray-100 shadow-lg rounded-lg p-4">
+            {cartItems.map(product => (
+              <div key={product.id} className="flex justify-between items-center border-b py-4 last:border-b-0">
+                <div className="flex-1">
+                  <span className="font-semibold text-gray-700">{product.name}</span>
+                  <div className="text-sm text-gray-500">Qty: {product.quantity}</div>
+                </div>
+                <div className="flex-none">
+                  <span className="text-lg font-bold text-gray-800">
+                    ${typeof product.price === 'number' ? product.price.toFixed(2) : 'N/A'}
+                  </span>
+                  <button 
+                    onClick={() => handleRemoveFromCart(product.id)} 
+                    className="text-red-500 hover:text-red-700 ml-4 transition duration-300">
+                    Remove
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Checkout Button */}
+          <button 
+            onClick={handleCheckout} 
+            className="mt-6 w-full py-3 bg-gray-800 text-white rounded-lg shadow-md hover:bg-gray-700 transition duration-300">
+            Complete Payment
+          </button>
         </>
       )}
     </div>
