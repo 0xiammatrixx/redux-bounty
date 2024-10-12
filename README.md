@@ -73,7 +73,9 @@ To set up and run this project in a Gitpod workspace, follow these steps:
 
 8. **Access the App**:
    - Once the app is running, Gitpod will provide you with a public URL. You can access the app via that URL.
-   - Make the ports public
+   - Go to PORTS in your terminal area and make sure both ports are set to public
+   - Open both links, typically, your backend will run on port 5000 and your frontend will run on port 5173
+   - You can now interact with the frontend of the app.
 
 ## How to Interact with the App
 
@@ -81,7 +83,7 @@ To set up and run this project in a Gitpod workspace, follow these steps:
 
 - **Admin**:
   - Can manage users,
-  - Has the ability to edit, delete, or update any user or product on the platform.
+  - Has the ability to add, edit, delete, or update any user on the platform.
   
 - **Seller**:
   - Can post new products, update or remove existing products.
