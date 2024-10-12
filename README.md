@@ -12,7 +12,7 @@ This website is a fully functional e-commerce platform that supports multiple ro
 - **Shopping Cart**: Shoppers can add products to their shopping cart, review their cart, and proceed to checkout.
 - **Responsive Design**: The website is fully responsive, providing an optimal user experience on both desktop and mobile devices.
 
-## **TAKE NOTE: THE NAVIGATION BAR IS COLLAPSED BY DEFAULT, YOU CAN OPEN IT FROM THE BOTTOM RIGHT MENU BUTTON**
+**TAKE NOTE: THE NAVIGATION BAR IS COLLAPSED BY DEFAULT, YOU CAN OPEN IT FROM THE TOP RIGHT MENU BUTTON**
 
 ## Prerequisites
 
