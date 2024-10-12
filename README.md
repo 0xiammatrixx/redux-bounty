@@ -5,8 +5,8 @@ This website is a fully functional e-commerce platform that supports multiple ro
 ## Key Features
 
 - **Role-Based Authentication**: Users can sign in as Admins, Sellers, or Shoppers, each with specific permissions.
-  - **Admin**: Manages users, monitors activities, and controls platform settings.
-  - **Seller**: Can post and manage products, view their sales, and interact with shoppers.
+  - **Admin**: Manages users.
+  - **Seller**: Can post and manage products.
   - **Shopper**: Can browse products, add items to the shopping cart, and make purchases.
 - **Product Management**: Sellers can post new products, edit product details, and manage their listings.
 - **Shopping Cart**: Shoppers can add products to their shopping cart, review their cart, and proceed to checkout.
@@ -35,7 +35,7 @@ To set up and run this project in a Gitpod workspace, follow these steps:
 2. **Install Node.js**:
    - If Node.js is not pre-installed in your Gitpod environment, install it with:
      ```bash
-     sudo apt-get install nodejs
+     sudo apt install nodejs
      ```
 
 3. **Install npm**:
@@ -53,25 +53,27 @@ To set up and run this project in a Gitpod workspace, follow these steps:
 5. **Install Project Dependencies**:
    - Navigate to the project directory and install the required dependencies:
      ```bash
-     cd <project-directory>
+     cd redux-bounty
      npm install
      ```
 
-6. **Run the Backend**:
-   - Go to the `backend` directory to start the backend server:
-     ```bash
-     cd backend
-     npm start
-     ```
-
-7. **Run the Frontend**:
+6. **Run the Frontend**:
    - From the project root directory, start the frontend:
      ```bash
      npm run dev
      ```
 
+7. **Run the Backend**:
+   - In a new terminal, go to the `backend` directory to start the backend server:
+     ```bash
+     cd redux-bounty
+     cd backend
+     npm start
+     ```
+
 8. **Access the App**:
    - Once the app is running, Gitpod will provide you with a public URL. You can access the app via that URL.
+   - Make the ports public
 
 ## How to Interact with the App
 
@@ -90,7 +92,7 @@ To set up and run this project in a Gitpod workspace, follow these steps:
 
 ### User Flow
 - **Login/Register**: Users can register as new users or log in with an existing account.
-- **Dashboard**: Upon login, users will be directed to their role-specific dashboard (Admin, Seller, or Shopper).
+- **Dashboard**: Upon login, users will be directed to the homepage, where they can access their role-specific dashboards (Admin, Seller, or Shopper).
 - **Shopping**: Shoppers can view product listings, view detailed product information, and add items to their cart.
 
 ## Made With
