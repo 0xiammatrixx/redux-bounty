@@ -42,7 +42,7 @@ const ShopperPage = () => {
         quantity: quantityToAdd 
       });
 
-      setNotification(`Added ${quantityToAdd} of ${product.name} to cart!`);
+      setNotification(`Item successfully added to cart`);
       setTimeout(() => setNotification(''), 3000);
     } else {
       alert('This product is out of stock or has an invalid price!');
@@ -55,7 +55,7 @@ const ShopperPage = () => {
 
   return (
     <div className="shopper-container min-h-screen bg-gray-200 flex flex-col items-center p-6">
-      <h1 className="text-4xl font-bold text-gray-800 mb-6">Available Products</h1>
+      <h1 className="text-4xl font-bold text-gray-800 mb-6">Products on Sale</h1>
 
       {notification && (
         <div className="notification bg-blue-200 text-blue-800 p-2 rounded-lg mb-4">

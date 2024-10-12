@@ -24,7 +24,7 @@ const Login = () => {
     if (foundUser) {
       if (foundUser.role === role) {
         dispatch(loginUser({ username, password, role }));
-        navigate('/dashboard'); // Redirect to dashboard after login
+        navigate('/'); // Redirect to dashboard after login
       } else {
         setError('Invalid role selected. Please select the correct role for this account.'); // Set error message for invalid role
       }

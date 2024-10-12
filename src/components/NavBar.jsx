@@ -51,7 +51,7 @@ const Navbar = () => {
       {/* Full sidebar navbar (only visible when menu is clicked) */}
       <div 
         ref={navRef} 
-        className={`fixed top-0 right-0 w-48 h-full bg-gray-900 text-white py-8 shadow-lg z-40 transform transition-transform duration-1000 ease-in-out rounded-l-lg ${
+        className={`fixed top-0 right-0 w-48 h-full bg-gray-900 text-white py-8 shadow-lg z-40 transform transition-transform duration-950 ease-in-out rounded-l-lg ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
@@ -70,13 +70,13 @@ const Navbar = () => {
           {currentUser ? (
             <button 
               onClick={() => { handleLogoutUser(); toggleNav(); }} 
-              className="hover:text-gray-400 transition duration-300 py-2">
+              className="bg-red-600 text-white py-1 px-3 rounded hover:bg-red-700 transition duration-200 fixed bottom-20">
               Logout
             </button>
           ) : (
             <>
-              <Link to="/login" className="hover:text-gray-400 transition duration-300 py-2" onClick={toggleNav}>Login</Link>
-              <Link to="/register" className="hover:text-gray-400 transition duration-300 py-2" onClick={toggleNav}>Register</Link>
+              <Link to="/login" className="mt-4 bg-primary text-white py-2 px-4 rounded-lg hover:bg-secondary transition duration-300" onClick={toggleNav}>Login</Link>
+              <Link to="/register" className="mt-4 bg-primary text-white py-2 px-4 rounded-lg hover:bg-secondary transition duration-300" onClick={toggleNav}>Register</Link>
             </>
           )}
         </div>
