@@ -27,7 +27,7 @@ To set up and run this project in a Gitpod workspace, follow these steps:
 1. **Clone the Repository**:
    - In your Gitpod workspace terminal, clone the repository:
      ```bash
-     git clone <REPO_URL>
+     git clone https://github.com/0xiammatrixx/redux-bounty.git
      ```
 
 2. **Install Node.js**:
