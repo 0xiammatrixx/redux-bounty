@@ -2,8 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   products: [
-    { id: 1, name: "Product 1", price: 29.99, quantity: 10 },
-    { id: 2, name: "Product 2", price: 19.99, quantity: 5 },
+    { id: 1, name: "Nike Air Jordan 4s", price: 140.99, quantity: 23 },
     // Add more products as needed
   ],
 };
