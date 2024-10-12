@@ -66,12 +66,14 @@ To set up and run this project in a Gitpod workspace, follow these steps:
 7. **Run the Backend**:
    - In a new terminal, go to the `backend` directory to start the backend server:
      ```bash
+     cd redux-bounty
      cd backend
      npm start
      ```
 
 8. **Access the App**:
    - Once the app is running, Gitpod will provide you with a public URL. You can access the app via that URL.
+   - Make the ports public
 
 ## How to Interact with the App
 
