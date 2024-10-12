@@ -11,14 +11,12 @@ const AdminPage = () => {
 
   const handleAddUser = () => {
     if (newUsername && newPassword) {
-      // Create new user object
       const newUser = {
         id: Date.now(), // Generate a unique ID for the new user
         username: newUsername,
         password: newPassword,
         role: newRole,
       };
-      // Dispatch the addUser action
       dispatch(addUser(newUser));
 
       // Clear the form fields
@@ -37,24 +35,24 @@ const AdminPage = () => {
   };
 
   return (
-    <div className="admin-page p-8 bg-gray-900 min-h-screen">
-      <h2 className="text-4xl font-bold mb-6 text-white">Admin Dashboard</h2>
-      <h3 className="text-2xl font-semibold mb-4 text-gray-300">Current Users</h3>
+    <div className="admin-page p-8 bg-gray-100 min-h-screen">
+      <h2 className="text-4xl font-bold mb-6 text-black">Admin Dashboard</h2>
+      <h3 className="text-2xl font-semibold mb-4 text-gray-800">Current Users</h3>
       <ul className="mb-6 space-y-4">
         {users.map((user) => (
-          <li key={user.id} className="flex justify-between items-center p-4 bg-gray-800 text-white rounded-lg shadow-md">
+          <li key={user.id} className="flex justify-between items-center p-4 bg-white text-black rounded-lg shadow-md">
             <span className="text-lg">{user.username} ({user.role})</span>
             <div className="flex items-center space-x-4">
               <button 
                 onClick={() => handleDeleteUser(user.id)} 
-                className="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition duration-300 ease-in-out"
+                className="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition duration-300 ease-in-out"
               >
                 Delete User
               </button>
               <select
                 value={user.role}
                 onChange={(e) => handleRoleChange(user.id, e.target.value)}
-                className="p-2 border border-gray-600 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="p-2 border border-gray-400 rounded-lg bg-gray-200 text-black focus:outline-none focus:ring-2 focus:ring-orange-500"
               >
                 <option value="shopper">Shopper</option>
                 <option value="seller">Seller</option>
@@ -65,26 +63,26 @@ const AdminPage = () => {
         ))}
       </ul>
 
-      <h3 className="text-2xl font-semibold mb-4 text-gray-300">Create New User</h3>
+      <h3 className="text-2xl font-semibold mb-4 text-gray-800">Create New User</h3>
       <div className="space-y-4">
         <input
           type="text"
           placeholder="Username"
           value={newUsername}
           onChange={(e) => setNewUsername(e.target.value)}
-          className="p-3 border border-gray-600 rounded-lg bg-gray-700 text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+          className="p-3 border border-gray-400 rounded-lg bg-gray-200 text-black focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
         />
         <input
           type="password"
           placeholder="Password"
           value={newPassword}
           onChange={(e) => setNewPassword(e.target.value)}
-          className="p-3 border border-gray-600 rounded-lg bg-gray-700 text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+          className="p-3 border border-gray-400 rounded-lg bg-gray-200 text-black focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
         />
         <select
           value={newRole}
           onChange={(e) => setNewRole(e.target.value)}
-          className="p-3 border border-gray-600 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="p-3 border border-gray-400 rounded-lg bg-gray-200 text-black focus:outline-none focus:ring-2 focus:ring-orange-500"
         >
           <option value="shopper">Shopper</option>
           <option value="seller">Seller</option>
@@ -92,7 +90,7 @@ const AdminPage = () => {
         </select>
         <button 
           onClick={handleAddUser}
-          className="bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 ease-in-out w-full"
+          className="bg-orange-500 text-white py-3 rounded-lg font-semibold hover:bg-orange-600 transition duration-300 ease-in-out w-full"
         >
           Add User
         </button>
