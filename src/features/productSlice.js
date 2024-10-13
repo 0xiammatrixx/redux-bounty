@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   products: [
-    { id: 1, name: "Nike Air Jordan 4s", price: 140.99, quantity: 23 },
+    { id: 1, name: "Nike Air Jordan 4s", price: 140.99, quantity: 0 },
     // Add more products as needed
   ],
 };
